@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kor Ocakbaşı · Közün başında</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Kor Ocakbaşı hayali bir markadır. Bu sayfa, UlvionTech'in sosyal medya videosu için hazırladığı örnek bir sitedir.">
+<!--
+  Bu sayfa gerçek bir işletmeye ait değildir. UlvionTech'in "siteniz kaç saniyede açılıyor?" videosu için
+  bilerek ağır kurulmuş bir örnektir: açılış animasyonu, kaydırmaya bağlı katmanlar, büyük ve sıkıştırılmamış
+  görseller, otomatik oynayan arka plan videosu ve sayfanın açılmasını bekleten animasyon kütüphaneleri.
+  Görseller ve video bilgisayarla üretilmiştir.
+-->
+<link rel="stylesheet" href="css/site.css">
+<script src="js/three.js"></script>
+<script src="js/gsap.js"></script>
+<script src="js/ScrollTrigger.js"></script>
+<script src="js/SplitText.js"></script>
+<script src="js/anime.js"></script>
+<script src="js/lenis.js"></script>
+</head>
+<body class="is-loading">
+
+<div class="ornek"><i></i>Örnek site · UlvionTech demosu</div>
+<div class="cursor" aria-hidden="true"></div>
+
+<div id="preloader" aria-hidden="true">
+  <div class="pl-half top"></div>
+  <div class="pl-half bot"></div>
+  <div class="pl-in">
+    <div class="pl-ring"><svg viewBox="0 0 120 120"><circle class="trk" cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52"/></svg><span class="pl-word">KOR</span></div>
+    <div class="pl-count"><span id="pl-num">0</span><small>%</small></div>
+    <div class="pl-note">Ateş yakılıyor</div>
+  </div>
+</div>
+
+<header class="nav">
+  <a class="logo" href="#top"><b>KOR</b><span>OCAKBAŞI</span></a>
+  <nav><a href="#menu">Menü</a><a href="#ocak">Ocak</a><a href="#hikaye">Hikâye</a><a class="nav-cta" href="#rezervasyon">Rezervasyon</a></nav>
+  <button class="burger" aria-label="Menü"><i></i><i></i></button>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <img class="hero-bg" src="img/kor-yatagi.png" alt="">
+    <video class="hero-vid" autoplay muted loop playsinline preload="auto">
+      <source src="video/kivilcim.webm" type="video/webm">
+      <source src="video/kivilcim.mp4" type="video/mp4">
+    </video>
+    <canvas id="ates"></canvas>
+    <img class="hero-smoke" src="img/duman.png" alt="">
+    <div class="hero-shade"></div>
+    <div class="hero-in">
+      <p class="kick">Odun ateşi <i>·</i> Köz <i>·</i> Duman</p>
+      <h1 class="title" aria-label="Kor"><span>K</span><span>O</span><span>R</span></h1>
+      <p class="sub">Ocakbaşı</p>
+      <p class="lead">Közün başında, <em>ateşin ustalığıyla.</em></p>
+      <div class="cta"><a class="btn fire" href="#rezervasyon">Masa ayırt</a><a class="btn ghost" href="#menu">Menüye bak</a></div>
+    </div>
+    <div class="scroll-hint"><span>Kaydır</span><i></i></div>
+  </section>
+
+  <section class="band" aria-hidden="true">
+    <div class="track">
+      <span>Ateş</span><i>✦</i><span class="o">Köz</span><i>✦</i><span>Duman</span><i>✦</i><span class="o">Ustalık</span><i>✦</i>
+      <span>Ateş</span><i>✦</i><span class="o">Köz</span><i>✦</i><span>Duman</span><i>✦</i><span class="o">Ustalık</span><i>✦</i>
+    </div>
+  </section>
+
+  <section class="ocak" id="ocak">
+    <div class="ocak-pin">
+      <div class="ocak-img"><img src="img/alev.png" alt=""></div>
+      <h2 class="ocak-t"><span>Her şiş,</span><span><em>közün tam kıvamında.</em></span></h2>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="sec-head"><p class="kick">Ocaktan</p><h2 class="sec-t">Bu akşam közde</h2></div>
+    <div class="cards">
+      <article class="card"><div class="ph"><img src="img/menu-adana.png" alt=""></div><div class="ct"><span class="no">01</span><h3>Adana</h3><p>Zırh kıyması, közde biber, sumaklı soğan.</p></div></article>
+      <article class="card"><div class="ph"><img src="img/menu-sis.png" alt=""></div><div class="ct"><span class="no">02</span><h3>Kuzu şiş</h3><p>Bir gece dinlenmiş but, meşe kömüründe.</p></div></article>
+      <article class="card"><div class="ph"><img src="img/menu-patlican.png" alt=""></div><div class="ct"><span class="no">03</span><h3>Közde patlıcan</h3><p>Ateşin içinde kabuğu kararana kadar.</p></div></article>
+      <article class="card"><div class="ph"><img src="img/menu-ciger.png" alt=""></div><div class="ct"><span class="no">04</span><h3>Ciğer şiş</h3><p>Kuyruk yağıyla, yüksek ateşte, hızlı.</p></div></article>
+    </div>
+  </section>
+
+  <section class="hikaye" id="hikaye">
+    <img class="hk-bg" src="img/hikaye.png" alt="">
+    <div class="hk-in">
+      <p class="kick">Hikâye</p>
+      <p class="hk-text">Ateşi acele ettirmeyiz. Kömür kor olana kadar bekler, şişi ancak o zaman ocağa koyarız. Lezzet, beklemeyi bilenindir.</p>
+    </div>
+  </section>
+
+  <section class="rez" id="rezervasyon">
+    <h2>Ateş yandı.<br><em>Masanız hazır.</em></h2>
+    <a class="btn fire big" href="#top">Masa ayırt</a>
+  </section>
+</main>
+
+<footer>
+  <p><b>Kor Ocakbaşı gerçek bir işletme değildir.</b> Bu sayfa, UlvionTech'in sosyal medya videosu için hazırladığı örnek bir sitedir. Görseller ve video bilgisayarla üretilmiştir.</p>
+  <p>© 2026 UlvionTech · Örnek çalışma</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
